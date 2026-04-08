@@ -1,35 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Malayalam Live TV</title>
-  <style>
-    body { background: black; color: white; font-family: sans-serif; }
-    .channels div { padding: 10px; cursor: pointer; }
-    .channels div:hover { background: gray; }
-  </style>
-</head>
-
-<body>
-
-<h2>📺 Malayalam Live TV</h2>
-
-<iframe id="player" width="100%" height="500"
-  src="https://www.youtube.com/embed/live_stream?channel=UCuh3F3lVg1cA7L5Yw6k0Fjg"
-  allowfullscreen>
-</iframe>
-
-<div class="channels">
-  <div onclick="play('UCuh3F3lVg1cA7L5Yw6k0Fjg')">Asianet News</div>
-  <div onclick="play('UCk8GzjMOrta8yxDcKfylJYw')">Manorama News</div>
-  <div onclick="play('UCpCiIDf9UrfRqte55FHWlYQ')">24 News</div>
-</div>
-
-<script>
-function play(id) {
-  document.getElementById("player").src =
-    "https://www.youtube.com/embed/live_stream?channel=" + id;
+<style>
+body {
+  background: #0b0b0b;
+  color: white;
+  font-family: Arial;
 }
-</script>
 
-</body>
-</html>
+h2 {
+  text-align: center;
+}
+
+iframe {
+  border-radius: 15px;
+}
+
+.channels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.channels div {
+  background: #1a1a1a;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.channels div:hover {
+  background: red;
+  transform: scale(1.05);
+}
+</style>
